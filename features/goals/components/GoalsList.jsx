@@ -2,7 +2,7 @@ import { FlatList, Text, View } from 'react-native';
 
 import GoalItem from './GoalItem';
 
-export default function GoalsList({ goals }) {
+export default function GoalsList({ goals, onDeleteGoal, onUpdateGoal }) {
   return (
     <View className="mt-8 flex-1">
       <View className="mb-4 flex-row items-center justify-between">
@@ -23,8 +23,16 @@ export default function GoalsList({ goals }) {
 
       <FlatList
         data={goals}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item, index }) => <GoalItem goal={item} index={index} />}
+        keyboardShouldPersistTaps="handled"
+        keyExtractor={(item) => item.id}
+        renderItem={({ item, index }) => (
+          <GoalItem
+            goal={item}
+            index={index}
+            onDeleteGoal={onDeleteGoal}
+            onUpdateGoal={onUpdateGoal}
+          />
+        )}
       />
     </View>
   );
