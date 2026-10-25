@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@rn-primitives/portal": "^1.5.3",
+    "@rn-primitives/slot": "^1.5.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "expo": "~57.0.26",
     "expo-status-bar": "~57.0.1",
     "nativewind": "4.2.7",
     "react": "19.2.3",
     "react-native": "0.86.3",
     "react-native-reanimated": "4.5.1",
-    "react-native-safe-area-context": "~5.7.0"
+    "react-native-safe-area-context": "~5.7.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "scripts": {
     "start": "expo start",
@@ -19,8 +25,10 @@
   },
   "private": true,
   "devDependencies": {
+    "@types/react": "~19.2.4",
     "babel-preset-expo": "~57.0.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "typescript": "~6.0.3"
   }
 }
